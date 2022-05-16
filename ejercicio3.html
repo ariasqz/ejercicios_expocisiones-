@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Guardamos la fecha actual
+        var fecha1 = new Date();    
+        //Obtenemos la fecha Unix (Milisegundos desde 1970 hasta el objeto fecha).
+        var tiempo1 = fecha1.getTime(); 
+        //Pedimos los datos por teclado
+        var nombre = prompt("Introduce el Nombre:");
+        var ape1 = prompt("Introduce apellido 1:");
+        var ape2 = prompt("Introduce Apellido 2:");
+        //Volvemos a guardar la fecha actual
+        var fecha2 = new Date(); 
+        //Y obtenemos la fecha Unix de esa fecha
+        var tiempo2 = fecha2.getTime(); 
+        //Calculamos el total entre la fecha 1 y la 2
+        var total = (tiempo2 - tiempo1) / 1000;
+        //Le decimos que fije los decimales en 1
+        total = total.toFixed(1);
+        //Imprimimos el resultado
+        document.write("En introducir " + nombre + " " + ape1 + " " + ape2 + " ha tardado " + total + " segundos.");
+    </script>
+</body>
+</html>
